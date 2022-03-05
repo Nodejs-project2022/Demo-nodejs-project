@@ -42,6 +42,8 @@ The volumes are mounted for mongodb and mysql in order to persist data or save d
 Vi docker-compose.yaml
 -----
 version: "3.8"
+
+
 services:
   app:
     build: .
@@ -50,12 +52,19 @@ services:
     depends_on:
     - mongo
     - mysql
+  
+  
+  
   mongo:
     image: mongo
     ports:
     - "27017:27017"
     volumes:
     - mongo-volume:/data/db
+  
+  
+  
+  
   mysql:
     image: mysql:8
     restart: always
@@ -67,6 +76,9 @@ services:
       - mysql-volume:/var/lib/mysql
     ports:
       - 3066:3306
+
+
+
 volumes:
   mongo-volume:
   mysql-volume:
@@ -75,7 +87,9 @@ volumes:
 # Run below to command to create container in docker platform.
 
 docker-compose ps  (To list running containers)
+
 docker-compose up (To install all containers)
+
 docker-compose up -d (run container in Detached mode)
 
 # Check list docker images created by docker-compose.yaml file
