@@ -41,12 +41,14 @@ The volumes are mounted for mongodb and mysql in order to persist data or save d
 
 Vi docker-compose.yaml
 -----
+
 version: "3.8"
 
 
 services:
 
   app:
+  
     build: .
     
     ports:
@@ -54,6 +56,7 @@ services:
     
     depends_on:
     - mongo
+    
     - mysql
   
   
@@ -90,7 +93,9 @@ services:
 
 
 volumes:
+
   mongo-volume:
+  
   mysql-volume:
   
 
