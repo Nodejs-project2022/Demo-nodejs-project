@@ -71,6 +71,7 @@ services:
   
   
   mysql:
+    
     image: mysql:8
     
     restart: always
