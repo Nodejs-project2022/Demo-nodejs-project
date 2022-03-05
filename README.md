@@ -49,6 +49,7 @@ services:
     build: .
     ports:
     - "8080:8080"
+    
     depends_on:
     - mongo
     - mysql
@@ -59,6 +60,7 @@ services:
     image: mongo
     ports:
     - "27017:27017"
+    
     volumes:
     - mongo-volume:/data/db
   
@@ -68,12 +70,15 @@ services:
   mysql:
     image: mysql:8
     restart: always
+    
     environment:
       MYSQL_DATABASE: DB
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
+    
     volumes:
       - mysql-volume:/var/lib/mysql
+    
     ports:
       - 3066:3306
 
