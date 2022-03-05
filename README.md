@@ -29,6 +29,7 @@ COPY . .
 Expose port (to access) and start application:  
 
  EXPOSE 8080
+ 
  CMD [ "npm", "start" ]
 
 
