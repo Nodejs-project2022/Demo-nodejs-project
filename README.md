@@ -45,8 +45,10 @@ version: "3.8"
 
 
 services:
+
   app:
     build: .
+    
     ports:
     - "8080:8080"
     
@@ -58,6 +60,7 @@ services:
   
   mongo:
     image: mongo
+    
     ports:
     - "27017:27017"
     
@@ -69,6 +72,7 @@ services:
   
   mysql:
     image: mysql:8
+    
     restart: always
     
     environment:
