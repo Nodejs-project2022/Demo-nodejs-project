@@ -3,7 +3,7 @@ FROM node:latest
 WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
-RUN npm install -g npm@8.5.5
+RUN npm install -g latest
 # Copy app source code
 COPY . .
 #Expose port and start application
