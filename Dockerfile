@@ -1,6 +1,6 @@
 FROM node:latest
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /Project/Demo-nodejs-project
 # Install app dependencies
 COPY package*.json ./
 RUN npm install -g latest
