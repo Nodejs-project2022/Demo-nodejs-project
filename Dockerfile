@@ -4,7 +4,6 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 RUN npm install -g latest
-Run npm install -g npm@8.5.5
 # Copy app source code
 COPY . .
 #Expose port and start application
